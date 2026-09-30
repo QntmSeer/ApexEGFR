@@ -1,0 +1,50 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local cache, scratch, and temporary files
+scratch/
+results_cache/
+results_backup/
+outputs/
+plots/
+configs/
+slurm/
+.gemini/
+*.tmp
+*.zip
+*.gif
+*.mp4
+*.html
+*.gnuplot
+CLAUDE_*
+
+# Root loose duplicates (tracked under data/, docs/, figures/)
+/ApexEGFR_Technical_Report.*
+/APEX_EGFR_PROTEINBASE_SUBMISSION*.csv
+/APEX_EGFR_TECHNICAL_REPORT.*
+/FINAL_20_METRICS_SUMMARY.csv
+/PROTEINBASE_DESIGNATED_MAPPING.*
+/plot*.png
+/competition-submission-template.csv

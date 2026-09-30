@@ -1,0 +1,11 @@
+{
+  "description": "Mouse EGFR Domain III conserved cross-species epitope",
+  "targets": [
+    {
+      "name": "mEGFR",
+      "target_path": "structures/mEGFR.pdb",
+      "chains": "A",
+      "hotspots": "382,384,408,409,411,412,415,417,438,440,441,465,466,469,472"
+    }
+  ]
+}

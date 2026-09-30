@@ -1,0 +1,92 @@
+[
+  {
+    "pos": 382,
+    "aa": "L",
+    "name": "LEU382",
+    "role": "hydrophobic_anchor"
+  },
+  {
+    "pos": 384,
+    "aa": "Q",
+    "name": "GLN384",
+    "role": "polar_hbond"
+  },
+  {
+    "pos": 408,
+    "aa": "Q",
+    "name": "GLN408",
+    "role": "conserved_ridge"
+  },
+  {
+    "pos": 409,
+    "aa": "H",
+    "name": "HIS409",
+    "role": "aromatic_core"
+  },
+  {
+    "pos": 411,
+    "aa": "Q",
+    "name": "GLN411",
+    "role": "polar_hbond"
+  },
+  {
+    "pos": 412,
+    "aa": "F",
+    "name": "PHE412",
+    "role": "hydrophobic_anchor"
+  },
+  {
+    "pos": 415,
+    "aa": "A",
+    "name": "ALA415",
+    "role": "surface_pocket"
+  },
+  {
+    "pos": 417,
+    "aa": "V",
+    "name": "VAL417",
+    "role": "hydrophobic_patch"
+  },
+  {
+    "pos": 438,
+    "aa": "I",
+    "name": "ILE438",
+    "role": "hydrophobic_core"
+  },
+  {
+    "pos": 440,
+    "aa": "S",
+    "name": "SER440",
+    "role": "polar_hbond"
+  },
+  {
+    "pos": 441,
+    "aa": "G",
+    "name": "GLY441",
+    "role": "conformation_loop"
+  },
+  {
+    "pos": 465,
+    "aa": "K",
+    "name": "LYS465",
+    "role": "basic_charge"
+  },
+  {
+    "pos": 466,
+    "aa": "I",
+    "name": "ILE466",
+    "role": "hydrophobic_patch"
+  },
+  {
+    "pos": 469,
+    "aa": "N",
+    "name": "ASN469",
+    "role": "polar_hbond"
+  },
+  {
+    "pos": 472,
+    "aa": "E",
+    "name": "GLU472",
+    "role": "acidic_switch_anchor"
+  }
+]
