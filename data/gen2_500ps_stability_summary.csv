@@ -1,0 +1,7 @@
+id,type,target_ca_rmsd_mean,binder_ca_rmsd_mean,binder_ca_rmsd_std,init_contacts,plateau_contacts,contact_retention_pct,is_dynamically_stable
+APEX-GEN2-02,Premier_Lead,1.12,1.41,0.12,320,238.6,74.6,False
+APEX-GEN2-01,Certified_Lead,0.97,1.06,0.1,299,259.6,86.8,True
+APEX-GEN2-06,Certified_Lead,0.93,1.08,0.09,350,305.8,87.4,True
+APEX-GEN2-08,Passed_Lead,1.01,1.13,0.17,338,301.3,89.1,True
+APEX-GEN2-09,Passed_Lead,0.87,1.36,0.13,295,256.3,86.9,True
+APEX-GEN2-04,Negative_Control,1.69,2.81,0.31,161,152.6,94.8,False
