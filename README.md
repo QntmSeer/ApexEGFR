@@ -66,8 +66,8 @@
 ```mermaid
 flowchart TD
     subgraph S1["1. Target Preparation & Epitope Mapping"]
-        T1["Human EGFR Domain III (PDB: 6ARU)"]
-        T2["Mouse EGFR Domain III (AF-Q01279)"]
+        T1["Human EGFR Ectodomain Met1–Ser645 (Sino Bio 10001-H08H)"]
+        T2["Mouse EGFR Ectodomain Met1–Ser647 (Sino Bio 51091-M08H)"]
         H1["Conserved β-Sheet Platform (Leu325, Phe357, Gln384, His409)"]
         T1 --> H1
         T2 --> H1
