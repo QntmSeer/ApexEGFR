@@ -30,6 +30,36 @@
 
 ---
 
+## Visual Biophysical Evidence & Figure Gallery
+
+### 1. Dual-Species Target Affinity & Tagged Candidate Landscape
+| Dual-Species Affinity Landscape ($N=182$) | Tagged Screen Candidate Landscape ($N=133$) |
+| :---: | :---: |
+| ![Dual-Species Affinity](figures/plot1_cross_species_affinity.png) | ![Tagged Screen Landscape](figures/plot1_overnight_cross_species.png) |
+
+### 2. Physical Clearance Gates (N-Glycan & C-Terminal Tag)
+| Ectodomain N-Glycan Clearance (Asn328, Asn420) | 52-AA C-Terminal Reporter Tag Clearance |
+| :---: | :---: |
+| ![Glycan Clearance](figures/plot2_overnight_glycan_clearance.png) | ![Tag Clearance](figures/plot3_overnight_tag_clearance.png) |
+
+### 3. Molecular Interactions & Sequence Enrichment
+| Buried Surface Area (SASA) vs Affinity | Amino Acid Odds-Ratio Enrichment |
+| :---: | :---: |
+| ![SASA vs Affinity](figures/plot3_sasa_vs_affinity.png) | ![AA Enrichment](figures/plot2_aa_enrichment_odds.png) |
+
+### 4. 10 ns Explicit-Solvent Molecular Dynamics Telemetry (`APEX-EGFR-16`)
+| 10 ns MD RMSD & Contact Telemetry | pH 6.5 vs pH 7.4 Comparative MD |
+| :---: | :---: |
+| ![10 ns MD Telemetry](figures/plot4_md_live_trajectory.png) | ![pH Comparison MD](figures/plot5_md_ph_comparison.png) |
+
+### 5. Multi-Objective Optimization & Free Energy Surface
+| 3D Multi-Objective Pareto Frontier | 3D MD Free Energy Surface |
+| :---: | :---: |
+| ![3D Pareto Landscape](figures/plot6_3d_pareto_landscape.png) | ![3D Free Energy Surface](figures/plot7_3d_md_free_energy_landscape.png) |
+
+---
+
+
 ## Repository Architecture
 
 ```
