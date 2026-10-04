@@ -59,6 +59,80 @@
 
 ---
 
+## System Architecture & Data Schema
+
+### Computational Pipeline Architecture
+
+```mermaid
+flowchart TD
+    subgraph S1["1. Target Preparation & Epitope Mapping"]
+        T1["Human EGFR Domain III (PDB: 6ARU)"]
+        T2["Mouse EGFR Domain III (AF-Q01279)"]
+        H1["Conserved β-Sheet Platform (Leu325, Phe357, Gln384, His409)"]
+        T1 --> H1
+        T2 --> H1
+    end
+
+    subgraph S2["2. Generative Backbone & Sequence Sampling"]
+        B1["BindCraft v2 Backbone Scaffolding"]
+        P1["ProteinMPNN Sequence Sampling"]
+        A1["AlphaFold2 Multimer Co-Folding (Human & Mouse)"]
+        S1 --> B1 --> P1 --> A1
+    end
+
+    subgraph S3["3. Active Learning & Negative Feedback Cloud"]
+        F1["Failure Classifier (Clashes, Glycan Occlusion)"]
+        N1["Negative Density Exclusion Cloud"]
+        A1 --> F1 --> N1
+        N1 -- "Resample Paratopes" --> P1
+    end
+
+    subgraph S4["4. Protonation & pH-Switch Design"]
+        PMPNN["Proton-PottsMPNN (Histidine & Aspartate Microstates)"]
+        DESEL["ΔE_sel Evaluation (pH 6.5 vs pH 7.4)"]
+        A1 --> PMPNN --> DESEL
+    end
+
+    subgraph S5["5. 10 ns Explicit-Solvent MD Telemetry"]
+        OMM["OpenMM 8.6 (Amber14SB, TIP3P Water, 310 K)"]
+        RMSD["RMSD Convergence & Contact Stability"]
+        DESEL --> OMM --> RMSD
+    end
+
+    subgraph S6["6. Gatekeeper & Novelty Verification"]
+        VERIFY["verify_submission.py (8-Step Gatekeeper Audit)"]
+        TYPER["run_novelty_benchmark.py (ProteinTyper 15-mer Window)"]
+        RMSD --> VERIFY
+        VERIFY --> TYPER
+    end
+
+    subgraph S7["7. Designated Submission & Registry"]
+        SUB["APEX_EGFR_PROTEINBASE_SUBMISSION.csv (19 Constructs)"]
+        REG["PROTEINBASE_DESIGNATED_MAPPING.csv (Live Codenames)"]
+        REPORT["ApexEGFR_Technical_Report.pdf (29-Page LaTeX Report)"]
+        TYPER --> SUB & REG & REPORT
+    end
+
+    classDef stage fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef highlight fill:#d1fae5,stroke:#059669,stroke-width:2px;
+    class S7 highlight;
+```
+
+### Data File Field Schema Specification
+
+| Field Name | Type | Range / Format | Description |
+| :--- | :--- | :--- | :--- |
+| **`name`** | String | `APEX-EGFR-XX` | Unique construct identification handle |
+| **`sequence`** | String | 68–89 AA | Canonical 20 amino acid sequence (100% Cysteine-free) |
+| **`scaffold_hash`** | String | Hexadecimal (8-char) | Structural backbone fold family hash |
+| **`iptm_human`** | Float | $0.662\text{--}0.836$ | AlphaFold2 interface TM-score against Human EGFR Domain III |
+| **`iptm_mouse`** | Float | $0.647\text{--}0.821$ | AlphaFold2 interface TM-score against Mouse EGFR Domain III |
+| **`tag_clearance_angstrom`** | Float | $4.43\text{--}21.80\text{ \AA}$ | Physical clearance distance between C-terminal tag and target surface |
+| **`glycan_clearance_angstrom`** | Float | $15.2\text{--}31.7\text{ \AA}$ | Minimum distance to N-linked glycans ($Asn328$, $Asn420$) |
+| **`delta_E_sel`** | Float | $-5.11\text{ to } -6.08\text{ kcal/mol}$ | pH selective binding energy differential (Proton-PottsMPNN) |
+| **`novelty_score`** | Float | $0.75\text{--}1.00$ | ProteinTyper 15-mer sequence novelty compliance score ($\ge 3/4$) |
+
+---
 
 ## Repository Architecture
 
