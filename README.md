@@ -25,8 +25,8 @@
    Explicit protonation microstate conditioning ($\text{HIS-P}$ vs $\text{HIS-S}$, $\text{ASP-P}$ vs $\text{ASP-D}$) using **Proton-PottsMPNN** generated designs with strong selective energy differentials ($\Delta E_{\text{sel}} = -5.11\text{ to } -6.08$).
 4. **All-Atom Molecular Dynamics (10 ns Explicit Solvent)**:
    Lead candidate **`APEX-EGFR-16`** (`quick-deer-ruby`) was validated via 10 ns TIP3P explicit-solvent MD at 310 K ($42,256$ atoms, OpenMM 8.6, Amber14SB), demonstrating backbone RMSD convergence ($1.10\text{ \AA}$) and persistent interatomic packing ($855.8 \pm 68.8$ contacts).
-5. **ProteinTyper De Novo Novelty Compliance**:
-   All 19 designs clear Proteinbase's automated ProteinTyper novelty audit ($\ge 3/4$), sampling 7 structurally distinct fold families with zero free cysteines and acidic isoelectric points ($pI \le 5.3$).
+5. **ProteinTyper De Novo Novelty & Internal Sequence Diversity Compliance**:
+   All 19 designs clear Proteinbase's automated ProteinTyper novelty audit ($\ge 3/4$). Aligned with official competition evaluation rules (Category 1: *Protein minibinders*, 40–100 AA), the submission samples **7 structurally distinct fold families** (`4a8595e9`, `89062c71`, `950df084`, `427b6045`, `d62b48ab`, `63dc2a52`, `ea57dda1`, `991afb06`) with zero free cysteines and acidic isoelectric points ($pI \le 5.3$), maximizing internal sequence and structural diversity within a single high-yielding modality.
 
 ---
 
